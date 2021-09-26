@@ -16,18 +16,14 @@ res= srp(req, timeout=1)
 
 for rep in res[0]:
 	if (rep[1].getlayer(TCP).flags == 18):
-		if(rep[1].getlayer(TCP).sport == 21 or rep[1].getlayer(TCP).sport == 22 or rep[1].getlayer(TCP).sport == 443 or rep[1].getlayer(TCP).sport == 80):
-			if (rep[1].getlayer(TCP).sport == 80):
-				print(" ><(((°>  Open HTTP",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
-
-			if (rep[1].getlayer(TCP).sport == 443):
-				print(" ><(((°>  Open HTTPS",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
-
-			if(rep[1].getlayer(TCP).sport == 22):
-				print(" ><(((°>  Open SSH",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
-
-			if (rep[1].getlayer(TCP).sport == 21):
-				print(" ><(((°>  Open FTP",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
+		if (rep[1].getlayer(TCP).sport == 80):
+			print(" ><(((°>  Open HTTP",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
+		if (rep[1].getlayer(TCP).sport == 443):
+			print(" ><(((°>  Open HTTPS",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
+		if(rep[1].getlayer(TCP).sport == 22):
+			print(" ><(((°>  Open SSH",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
+		if (rep[1].getlayer(TCP).sport == 21):
+			print(" ><(((°>  Open FTP",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
 
 		else:
 			print(" ><(((°>  Open ",  rep[1].getlayer(TCP).sport, "   ><(((°> ")
