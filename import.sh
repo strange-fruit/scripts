@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#Ceci est un script qui permet d'importer un fichier .ova vers un serveur Proxmox
+#Il fonctionne avec un seul argument : $1 qui correspond au fichier .ova
+#Il créer une VM et lui ajoute le disque OVA
+#A la fin du script, il est nécéssaire d'aller en interface graphique du proxmox pour supprimer le disque0 et attacher le disque1 (ova) en SATA.
+
 tar -xvf $1
 echo -ne "Extract done..!\n"
 rm ./*.ovf ./*.mf
