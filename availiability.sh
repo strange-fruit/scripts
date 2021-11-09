@@ -9,7 +9,7 @@ function DOWN()
 		if [ $? != 0 ]
 		then
 			echo "DOWN"
-			python3 /home/save/exportdns.py 109.220.21.135
+			python3 /home/save/dnszoneOVH.py 109.220.21.135
 			break
 		fi
 	done
