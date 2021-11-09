@@ -6,6 +6,7 @@
 
 import ovh
 import json
+import sys
 
 #shreks optionnel mais quand même le bienvenu
 var1="⣿⣿⣿⣿⠋⢩⢹⣿⣿⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
@@ -29,7 +30,7 @@ for i in shrex:
 # FIN DU SHREKS
 
 #pour la situation c'est l'IP publique de l'entreprise
-dstip=input("\n \nSHREKS VOUS DEMANDE UNE NOUVELLE IP CIBLE>>> ")
+dstip=sys.argv[1]
 
 
 
